@@ -34,12 +34,12 @@
                 <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0">
-                <ui:TextBox x:Name="textbox"  PlaceholderText="Where do you want to go..." Margin="0,0,0,20" />
-                <Button Content="Submit"  Click="Button_Click" />
+                <ui:TextBox x:Name="textbox" Text="{Binding ViewModel.NewItemText, UpdateSourceTrigger=PropertyChanged}" PlaceholderText="Where do you want to go..." Margin="0,0,0,20" />
+                <Button Content="Submit" Command="{Binding ViewModel.AddItemCommand}" />
                 <TextBlock x:Name="ResultTextBlock" TextWrapping="Wrap" Text="{Binding Text, ElementName=textbox}" />
             </StackPanel>
-            <ListBox Grid.Row="1">
-                <ListBoxItem Content="Omu"/>
+            <ListBox ItemsSource="{Binding ViewModel.MyCollection}" Grid.Row="1">
+                <!--<ListBoxItem Content="Omu"/>
                 <ListBoxItem Content="My Mother's Cousin"/>
                 <ListBoxItem Content="Mina Bakery"/>
                 <ListBoxItem Content="Self Raised"/>
@@ -50,7 +50,12 @@
                 <ListBoxItem Content="My Mother's Cousin"/>
                 <ListBoxItem Content="My Mother's Cousin"/>
                 <ListBoxItem Content="My Mother's Cousin"/>
-                <ListBoxItem Content="Something In Bexley"/>
+                <ListBoxItem Content="Something In Bexley"/>-->
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
     </Grid>

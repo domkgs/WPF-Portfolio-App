@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
     Title="PortfolioPage"
     d:DataContext="{d:DesignInstance local:PortfolioPage, IsDesignTimeCreatable=False}"
     d:DesignHeight="450"
@@ -61,22 +62,26 @@
                                 <TextBlock
                                     Margin="0,0,0,10"
                                     FontSize="18"
+                                    TextWrapping="Wrap"
                                     Foreground="#B7FFFFFF"
                                     Text="Hello There!" />
                                 <TextBlock
                                     Margin="0,0,0,10"
                                     FontSize="18"
+                                    TextWrapping="Wrap"
                                     Foreground="#B7FFFFFF"
                                     Text="I'm Dom. A Computer Science and Mechanical Engineering" />
                                 <TextBlock
                                     Margin="0,0,0,10"
                                     FontSize="28"
                                     FontWeight="Bold"
+                                    TextWrapping="Wrap"
                                     Foreground="#FFFFFF"
                                     Text="Graduate Engineer" />
                                 <TextBlock
                                     FontSize="18"
                                     Foreground="#B7FFFFFF"
+                                    TextWrapping="Wrap"
                                     Text="Welcome To My Portfolio Application" />
                             </StackPanel>
                         </Grid>
@@ -105,7 +110,7 @@
                     Width="200"
                     Grid.Column="1"
                     CornerRadius="50">
-                
+
                 <Border.Background>
                     <ImageBrush
                     ImageSource="/UiDesktopApp1;component/Assets/1638149856881.jpg"
@@ -137,32 +142,338 @@
                         </RadialGradientBrush>
                     </Border.Background>
                     <Grid>
-                        <StackPanel
-                        Margin="30,0"
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:DynamicScrollViewer Foreground="White">
+                            <StackPanel
+                            Grid.Column="0"
+                        Margin="30,20"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
                         Background="Transparent">
                             <TextBlock
                                     Margin="0,0,0,10"
-                                    FontSize="18"
+                                    FontSize="24"
+                                FontWeight="Bold"
                                     Foreground="#B7FFFFFF"
-                                    Text="Hello There!" />
+                                    >
+                                <ui:SymbolIcon Symbol="Accessibility32" Foreground="White" Margin="0,0,4,0" Filled="True"/>Profile
+                            </TextBlock>
+                            <TextBlock
+                                    Margin="0,0,0,15"
+                                    FontSize="18"
+                                    TextWrapping="Wrap"
+                                    Foreground="#B7FFFFFF"
+                                    Text="Recently graduated Bachelor of Computer Science and Bachelor of 
+Mechanical Engineering (Hons) major from the University of New South 
+Wales, with 1.5+ years of work experience. With a strong sense of 
+wonder and an eagerness to learn and adapt to new environments and 
+challenges, I aim to leverage a proven knowledge of computer aided 
+engineering, product cost, programming and process improvement 
+skills to successfully fill the graduate software engineer role at your 
+company." />
                             <TextBlock
                                     Margin="0,0,0,10"
-                                    FontSize="18"
+                                    FontSize="24"
                                     Foreground="#B7FFFFFF"
-                                    Text="I'm Dom. A Computer Science and Mechanical Engineering" />
+                                FontWeight="Bold"
+                                    x:Name="Employment"
+                                    >
+                                <ui:SymbolIcon Symbol="Briefcase12" Foreground="White" Margin="0,0,4,0"  Filled="True"/>Employment History
+                            </TextBlock>
+
+                            <TextBlock
+                                    Margin="0,0,0,7"
+                                    FontSize="19"
+                                     FontWeight="DemiBold"
+                                    Foreground="#B7FFFFFF"
+                                    >
+                                Engineering Support Officer at Daikin, Sydney
+                            </TextBlock>
+
                             <TextBlock
                                     Margin="0,0,0,10"
-                                    FontSize="28"
-                                    FontWeight="Bold"
-                                    Foreground="#FFFFFF"
-                                    Text="Graduate Engineer" />
+                                    FontSize="14"
+                                    Foreground="#B7FFFFFF"
+                                    FontWeight="Light"
+                                    >
+                                December 2022
+                            </TextBlock>
+
+   
+                            <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
+                                    FontSize="16"
+                                    Foreground="#B7FFFFFF">&#8226;
+                                        Provide CFD airflow analysis of outdoor plant to assist in 
+                                        optimising project design using ParaView.
+                            </TextBlock>
+
+
+                            <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
+                                    FontSize="16"
+                                    Foreground="#B7FFFFFF">&#8226;
+                                        Select and design VRV air handling units to match project 
+                                        specifications or requirements.
+                            </TextBlock>
+
+                            <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
+                                    FontSize="16"
+                                    Foreground="#B7FFFFFF">&#8226;
+                                         Assisting with testing and validation of HVAC control systems for 
+                                        research and development department.
+                            </TextBlock>
+
+
+                            <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
+                                    FontSize="16"
+                                    Foreground="#B7FFFFFF">&#8226;
+                                          Developing and maintenance of product selection software and 
+                                            application tools using WPF .NET framework.
+                            </TextBlock>
+
                             <TextBlock
+                                    Margin="0,10,0,7"
+                                    FontSize="19"
+                                    FontWeight="DemiBold"
+                                    Foreground="#B7FFFFFF"
+                                    >
+                                Software Engineering Intern at WeAssist, Kuala Lumpur
+                            </TextBlock>
+
+                                <TextBlock
+                                    Margin="0,0,0,10"
+                                    FontSize="14"
+                                    FontWeight="Light"
+                                    Foreground="#B7FFFFFF"
+                                    >
+                                July 2022 — September 2022
+                                </TextBlock>
+
+                                <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
+                                    FontSize="16"
+                                    Foreground="#B7FFFFFF">&#8226;
+                                         Contributed to the back-end API of the application requiring the 
+set-up and use of Nest.js and used Postman to test API endpoints.
+                                </TextBlock>
+
+
+                                <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
+                                    FontSize="16"
+                                    Foreground="#B7FFFFFF">&#8226;
+                                          Implemented log-in and log-out endpoints using the Nest.js 
+framework and successfully tested them in Postman
+                                </TextBlock>
+
+                                <TextBlock
+                                    Margin="0,10,0,7"
+                                    FontSize="19"
+                                    FontWeight="DemiBold"
+                                    Foreground="#B7FFFFFF"
+                                    >
+                                Mechanical Engineering Intern at Meinhardt Group, Kuala Lumpur
+                                </TextBlock>
+
+
+                                <TextBlock
+                                    Margin="0,0,0,10"
+                                    FontSize="14"
+                                    FontWeight="Light"
+                                    Foreground="#B7FFFFFF"
+                                    >
+                                October 2019 — January 2021
+                                </TextBlock>
+
+
+                                <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
+                                    FontSize="16"
+                                    Foreground="#B7FFFFFF">&#8226;
+                                         Mechanical Engineering Intern at Meinhardt Group with a focus 
+on Heating, Ventilation and Air Conditioning analysis and systems 
+implementation.
+                                </TextBlock>
+
+
+                                <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
+                                    FontSize="16"
+                                    Foreground="#B7FFFFFF">&#8226;
+                                            Calculated heat load using Carrier software for HVAC 
+implementation for a local hospital and TnB electrical transformer 
+building.
+                                </TextBlock>
+
+                                <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
+                                    FontSize="16"
+                                    Foreground="#B7FFFFFF">&#8226;
+                                            Amended CAD drawings with new HVAC systems using AutoCAD.
+                                </TextBlock>
+                                
+
+
+
+
+
+                                <!--<TextBlock
                                     FontSize="18"
                                     Foreground="#B7FFFFFF"
                                     Text="Welcome To My Portfolio Application" />
-                            <lvc:PieChart x:Name="chart" Height="200" Series="{Binding ViewModel.ChartData}" />
+                            <lvc:PieChart x:Name="chart" Height="200" Series="{Binding ViewModel.ChartData}" />-->
+                        </StackPanel>
+                        </ui:DynamicScrollViewer>
+
+                        <StackPanel Margin="10,20" Grid.Column="1">
+
+                            
+
+                           
+                                <TextBlock
+                                    Margin="0,0,0,10"
+                                    FontSize="24"
+                                    Foreground="#B7FFFFFF"
+                                FontWeight="Bold"
+                                    
+                                    >
+                                <ui:SymbolIcon Symbol="AppGeneric20" Foreground="White" Margin="0,0,4,0"  Filled="True"/>Skills
+                            </TextBlock>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Margin="0,20,0,10"
+                                            FontSize="20"
+                                    Foreground="#B7FFFFFF">
+                                            Java
+                            </TextBlock>
+
+                                <ProgressBar Margin="0,20,40,10" IsIndeterminate="True" Grid.Column="1" Foreground="LightCyan" />
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Margin="0,20,0,10"
+                                            FontSize="20"
+                                    Foreground="#B7FFFFFF">
+                                            C
+                                </TextBlock>
+
+                                <ProgressBar Margin="0,20,40,10" IsIndeterminate="True" Grid.Column="1" Foreground="LightCyan" />
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Margin="0,20,0,10"
+                                            FontSize="20"
+                                    Foreground="#B7FFFFFF">
+                                            C#
+                                </TextBlock>
+
+                                <ProgressBar Margin="0,20,40,10" IsIndeterminate="True" Grid.Column="1" Foreground="LightCyan" />
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Margin="0,20,0,10"
+                                            FontSize="20"
+                                    Foreground="#B7FFFFFF">
+                                            Python
+                                </TextBlock>
+
+                                <ProgressBar Margin="0,20,40,10" IsIndeterminate="True" Grid.Column="1" Foreground="LightCyan" />
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Margin="0,20,0,10"
+                                            FontSize="20"
+                                    Foreground="#B7FFFFFF">
+                                            JavaScript
+                                </TextBlock>
+
+                                <ProgressBar Margin="0,20,40,10" IsIndeterminate="True" Grid.Column="1" Foreground="LightCyan" />
+                            </Grid>
+
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Margin="0,20,0,10"
+                                            FontSize="20"
+                                    Foreground="#B7FFFFFF">
+                                            React
+                                </TextBlock>
+
+                                <ProgressBar Margin="0,20,40,10" IsIndeterminate="True" Grid.Column="1" Foreground="LightCyan" />
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Margin="0,20,0,10"
+                                            FontSize="20"
+                                    Foreground="#B7FFFFFF">
+                                            .Net
+                                </TextBlock>
+
+                                <ProgressBar Margin="0,20,40,10" IsIndeterminate="True" Grid.Column="1" Foreground="LightCyan" />
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Margin="0,20,0,10"
+                                            FontSize="20"
+                                    Foreground="#B7FFFFFF">
+                                            PostgreSQL
+                                </TextBlock>
+
+                                <ProgressBar Margin="0,20,40,10" IsIndeterminate="True" Grid.Column="1" Foreground="LightCyan" />
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Margin="0,20,0,10"
+                                            FontSize="20"
+                                    Foreground="#B7FFFFFF">
+                                            Node.js
+                                </TextBlock>
+
+                                <ProgressBar Margin="0,20,40,10" IsIndeterminate="True" Grid.Column="1" Foreground="LightCyan" />
+                            </Grid>
+
                         </StackPanel>
                     </Grid>
                 </Border>

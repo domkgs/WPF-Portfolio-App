@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="HandyControl" Version="3.4.0" />
     <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1823.32" />
     <PackageReference Include="WPF-UI" Version="2.0.3" />
@@ -26,6 +27,7 @@
     <None Remove="Assets\1638149856881.jpg" />
     <None Remove="Assets\applicationIcon-1024.png" />
     <None Remove="Assets\applicationIcon-256.png" />
+    <None Remove="Assets\collection.txt" />
     <None Remove="Assets\pxfuel.jpg" />
     <None Remove="Assets\wp12118362.png" />
   </ItemGroup>
@@ -34,6 +36,7 @@
     <Resource Include="Assets\1638149856881.jpg" />
     <Resource Include="Assets\applicationIcon-1024.png" />
     <Resource Include="Assets\applicationIcon-256.png" />
+    <Resource Include="Assets\collection.txt" />
     <Resource Include="Assets\pxfuel.jpg" />
     <Resource Include="Assets\wp12118362.png" />
   </ItemGroup>

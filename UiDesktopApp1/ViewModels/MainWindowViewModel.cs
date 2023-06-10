@@ -59,7 +59,7 @@ namespace UiDesktopApp1.ViewModels
                 },
                 new NavigationItem()
                 {
-                    Content = "Places To Go",
+                    Content = "Places To Take Paul",
                     PageTag = "maps",
                     Icon = SymbolRegular.Map24,
                     PageType = typeof(Views.Pages.MapsPage)

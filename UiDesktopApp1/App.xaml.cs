@@ -8,7 +8,10 @@ using System.Windows.Threading;
 using UiDesktopApp1.Models;
 using UiDesktopApp1.Services;
 using Wpf.Ui.Mvvm.Contracts;
+using System.Collections.ObjectModel;
+using System.Linq;
 using Wpf.Ui.Mvvm.Services;
+using System;
 
 namespace UiDesktopApp1
 {
