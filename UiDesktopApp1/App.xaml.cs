@@ -12,6 +12,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Wpf.Ui.Mvvm.Services;
 using System;
+using UiDesktopApp1.ViewModels;
 
 namespace UiDesktopApp1
 {
@@ -60,6 +61,8 @@ namespace UiDesktopApp1
                 services.AddScoped<ViewModels.PortfolioViewModel>();
                 services.AddScoped<Views.Pages.MapsPage>();
                 services.AddScoped<ViewModels.MapsViewModel>();
+                services.AddScoped<Views.Pages.WeatherPage>();
+                services.AddScoped<ViewModels.WeatherViewModel>();
                 // Configuration
                 services.Configure<AppConfig>(context.Configuration.GetSection(nameof(AppConfig)));
             }).Build();
@@ -88,6 +91,14 @@ namespace UiDesktopApp1
         /// </summary>
         private async void OnExit(object sender, ExitEventArgs e)
         {
+
+            MapsViewModel mapsViewModel = App.GetService<ViewModels.MapsViewModel>();
+            // Check if the instance is not null
+            if (mapsViewModel != null)
+            {
+                mapsViewModel.SaveCollectionToFile();
+            }
+
             await _host.StopAsync();
 
             _host.Dispose();

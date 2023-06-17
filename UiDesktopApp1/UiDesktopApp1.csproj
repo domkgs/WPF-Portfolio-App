@@ -27,7 +27,12 @@
     <None Remove="Assets\1638149856881.jpg" />
     <None Remove="Assets\applicationIcon-1024.png" />
     <None Remove="Assets\applicationIcon-256.png" />
-    <None Remove="Assets\collection.txt" />
+    <None Remove="Assets\DSC_5600 %281%29.jpg" />
+    <None Remove="Assets\DSC_5655 %281%29.jpg" />
+    <None Remove="Assets\DSC_5663.jpg" />
+    <None Remove="Assets\DSC_5673.jpg" />
+    <None Remove="Assets\DSC_5691.jpg" />
+    <None Remove="Assets\DSC_5764.jpg" />
     <None Remove="Assets\pxfuel.jpg" />
     <None Remove="Assets\wp12118362.png" />
   </ItemGroup>
@@ -36,7 +41,12 @@
     <Resource Include="Assets\1638149856881.jpg" />
     <Resource Include="Assets\applicationIcon-1024.png" />
     <Resource Include="Assets\applicationIcon-256.png" />
-    <Resource Include="Assets\collection.txt" />
+    <Resource Include="Assets\DSC_5600 (1).jpg" />
+    <Resource Include="Assets\DSC_5655 (1).jpg" />
+    <Resource Include="Assets\DSC_5663.jpg" />
+    <Resource Include="Assets\DSC_5673.jpg" />
+    <Resource Include="Assets\DSC_5691.jpg" />
+    <Resource Include="Assets\DSC_5764.jpg" />
     <Resource Include="Assets\pxfuel.jpg" />
     <Resource Include="Assets\wp12118362.png" />
   </ItemGroup>

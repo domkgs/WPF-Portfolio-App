@@ -1,4 +1,5 @@
-﻿using Wpf.Ui.Common.Interfaces;
+﻿using UiDesktopApp1.Services;
+using Wpf.Ui.Common.Interfaces;
 
 namespace UiDesktopApp1.Views.Pages
 {

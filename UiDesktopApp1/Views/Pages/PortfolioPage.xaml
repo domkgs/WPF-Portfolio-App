@@ -283,7 +283,8 @@ framework and successfully tested them in Postman
                                     FontWeight="Light"
                                     Foreground="#B7FFFFFF"
                                     >
-                                October 2019 — January 2021
+                                October 2019 — January 2021
+
                                 </TextBlock>
 
 
@@ -292,7 +293,8 @@ framework and successfully tested them in Postman
                                     Foreground="#B7FFFFFF">&#8226;
                                          Mechanical Engineering Intern at Meinhardt Group with a focus 
 on Heating, Ventilation and Air Conditioning analysis and systems 
-implementation.
+implementation.
+
                                 </TextBlock>
 
 
@@ -307,7 +309,8 @@ building.
                                 <TextBlock TextWrapping="Wrap"  Margin="0,0,0,10"
                                     FontSize="16"
                                     Foreground="#B7FFFFFF">&#8226;
-                                            Amended CAD drawings with new HVAC systems using AutoCAD.
+                                            Amended CAD drawings with new HVAC systems using AutoCAD.
+
                                 </TextBlock>
                                 
 

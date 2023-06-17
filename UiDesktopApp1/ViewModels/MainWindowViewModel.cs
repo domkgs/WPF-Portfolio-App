@@ -45,9 +45,9 @@ namespace UiDesktopApp1.ViewModels
                 },
                 new NavigationItem()
                 {
-                    Content = "Data",
-                    PageTag = "data",
-                    Icon = SymbolRegular.DataHistogram24,
+                    Content = "Photography",
+                    PageTag = "photography",
+                    Icon = SymbolRegular.PhotoFilter20,
                     PageType = typeof(Views.Pages.DataPage)
                 },
                 new NavigationItem()
@@ -59,10 +59,17 @@ namespace UiDesktopApp1.ViewModels
                 },
                 new NavigationItem()
                 {
-                    Content = "Places To Take Paul",
+                    Content = "Maps",
                     PageTag = "maps",
                     Icon = SymbolRegular.Map24,
                     PageType = typeof(Views.Pages.MapsPage)
+                },
+                new NavigationItem()
+                {
+                    Content = "Weather",
+                    PageTag = "weather",
+                    Icon = SymbolRegular.WeatherCloudy20,
+                    PageType = typeof(Views.Pages.WeatherPage)
                 }
             };
 

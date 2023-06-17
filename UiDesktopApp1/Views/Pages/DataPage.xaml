@@ -16,26 +16,108 @@
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     mc:Ignorable="d">
 
-    <Grid Margin="56,0">
-        <ui:VirtualizingItemsControl
-            Foreground="{DynamicResource TextFillColorSecondaryBrush}"
-            ItemsSource="{Binding ViewModel.Colors, Mode=OneWay}"
-            VirtualizingPanel.CacheLengthUnit="Item">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate DataType="{x:Type models:DataColor}">
-                    <ui:Button
-                        Width="80"
-                        Height="80"
-                        Margin="2"
-                        Padding="0"
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch"
-                        Appearance="Secondary"
-                        Background="{Binding Color, Mode=OneWay}"
-                        FontSize="25"
-                        Icon="Fluent24" />
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ui:VirtualizingItemsControl>
-    </Grid>
+    <ui:DynamicScrollViewer>
+        <WrapPanel Margin="56,0">
+            <Border
+                        
+                        Grid.Row="0"
+                        Height="600"
+                        Width="350"
+                        Margin="10,0,0,10"
+                        CornerRadius="12">
+
+                <Border.Background>
+                    <ImageBrush
+                        ImageSource="/UiDesktopApp1;component/Assets/DSC_5600 (1).jpg"
+                        RenderOptions.BitmapScalingMode="HighQuality"
+                        Stretch="UniformToFill" />
+                </Border.Background>
+            </Border>
+
+            <Border
+                        
+                        Grid.Row="0"
+                        Height="600"
+                        Width="350"
+                        Margin="10,0,0, 10"
+                        
+                        CornerRadius="12">
+
+                <Border.Background>
+                    <ImageBrush
+                        ImageSource="/UiDesktopApp1;component/Assets/DSC_5655 (1).jpg"
+                        RenderOptions.BitmapScalingMode="HighQuality"
+                        Stretch="UniformToFill" />
+                </Border.Background>
+            </Border>
+
+            <Border
+                        
+                        Grid.Row="0"
+                        Height="600"
+                        Width="350"
+                        Margin="10,0,0, 10"
+                        
+                        CornerRadius="12">
+
+                <Border.Background>
+                    <ImageBrush
+                        ImageSource="/UiDesktopApp1;component/Assets/DSC_5663.jpg"
+                        RenderOptions.BitmapScalingMode="HighQuality"
+                        Stretch="UniformToFill" />
+                </Border.Background>
+            </Border>
+
+            <Border
+                        
+                        Grid.Row="0"
+                        Height="600"
+                        Width="350"
+                        Margin="10,0,0, 10"
+                        
+                        CornerRadius="12">
+
+                <Border.Background>
+                    <ImageBrush
+                        ImageSource="/UiDesktopApp1;component/Assets/DSC_5673.jpg"
+                        RenderOptions.BitmapScalingMode="HighQuality"
+                        Stretch="UniformToFill" />
+                </Border.Background>
+            </Border>
+
+            <Border
+                        
+                        Grid.Row="0"
+                        Height="600"
+                        Width="350"
+                        Margin="10,0,0, 10"
+                        
+                        CornerRadius="12">
+
+                <Border.Background>
+                    <ImageBrush
+                        ImageSource="/UiDesktopApp1;component/Assets/DSC_5691.jpg"
+                        RenderOptions.BitmapScalingMode="HighQuality"
+                        Stretch="UniformToFill" />
+                </Border.Background>
+            </Border>
+
+            <Border
+                        
+                        Grid.Row="0"
+                        Height="600"
+                        Width="350"
+                        Margin="10,0,0, 10"
+                        
+                        CornerRadius="12">
+
+                <Border.Background>
+                    <ImageBrush
+                        ImageSource="/UiDesktopApp1;component/Assets/DSC_5764.jpg"
+                        RenderOptions.BitmapScalingMode="HighQuality"
+                        Stretch="UniformToFill" />
+                </Border.Background>
+            </Border>
+        </WrapPanel>
+    </ui:DynamicScrollViewer>
 </ui:UiPage>

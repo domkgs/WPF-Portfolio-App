@@ -26,22 +26,21 @@ namespace UiDesktopApp1.ViewModels
 
         public MapsViewModel()
         {
-            StreamResourceInfo resourceInfo = Application.GetResourceStream(new Uri("/UiDesktopApp1;component/Assets/collection.txt", UriKind.RelativeOrAbsolute));
+            string filePath = "C:\\Users\\domin\\source\\repos\\UiDesktopApp1\\UiDesktopApp1\\Assets\\collection.txt";
 
-            // Read the lines from the stream (assuming it's a text file)
-            using (StreamReader reader = new StreamReader(resourceInfo.Stream))
+            // Read the lines from the file
+            List<string> lines = new List<string>();
+
+            foreach (string line in File.ReadLines(filePath))
             {
-                List<string> lines = new List<string>();
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                if (!string.IsNullOrWhiteSpace(line))
                 {
                     lines.Add(line);
                 }
-
-                // Initialize the ObservableCollection<string> with the lines
-                MyCollection = new ObservableCollection<string>(lines);
             }
 
+            // Initialize the ObservableCollection<string> with the lines
+            MyCollection = new ObservableCollection<string>(lines);
 
         }
 
@@ -56,8 +55,36 @@ namespace UiDesktopApp1.ViewModels
         [RelayCommand]
         private void AddItem()
         {
-            MyCollection.Add(NewItemText);
+            if(!string.IsNullOrWhiteSpace(NewItemText)) { MyCollection.Add(NewItemText); }
+            
             NewItemText = string.Empty; // Clear the text box after adding the item
         }
+
+        [RelayCommand]
+        private void RemoveItem(object parameter) 
+        {
+            string? itemToDelete = parameter as string;
+            if (itemToDelete != null)
+            {
+                MyCollection.Remove(itemToDelete);
+            }
+        }
+
+
+        public void SaveCollectionToFile()
+        {
+            string filePath = "C:\\Users\\domin\\source\\repos\\UiDesktopApp1\\UiDesktopApp1\\Assets\\collection.txt";
+
+            // Open the text file in write mode, which will overwrite the existing contents
+            using (StreamWriter writer = new StreamWriter(filePath, false))
+            {
+                // Save each entry of the collection to the text file
+                foreach (string item in MyCollection)
+                {
+                    writer.WriteLine(item);
+                }
+            }
+        }
+
     }
 }

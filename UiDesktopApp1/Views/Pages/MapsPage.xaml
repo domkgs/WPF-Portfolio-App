@@ -53,7 +53,15 @@
                 <ListBoxItem Content="Something In Bexley"/>-->
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding}" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="{Binding}" Margin="0,0,10,0" Grid.Column="0" />
+                            <ui:Button BorderThickness="0" MouseOverBackground="#F57D7F" Icon="Delete16" Command="{Binding ViewModel.RemoveItemCommand, RelativeSource={RelativeSource AncestorType=ui:UiPage}}" CommandParameter="{Binding}"  Grid.Column="1" />
+                        </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
